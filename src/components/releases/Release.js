@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import ReleaseItem from './ReleaseItem';
+import ReleaseItem from './RecordingItem';
 import getRelease from '../../services/artistApi';
 
 
-const [release, setRelease] = useState;
+const [releaseList, setReleaseList] = useState();
 
-const Release = ({ release }) => {
+const ReleaseList = ({ releaseList }) => {
   const releaseElements = release.map ((item, id) => (
     <li key={id}>
       <ReleaseItem releaseItem={item} />
@@ -26,7 +26,7 @@ const Release = ({ release }) => {
   );
 };
 
-Release.propTypes = {
+ReleaseList.propTypes = {
   Artist: PropTypes.string.isRequired,
   release: PropTypes.string.isRequired,
   ReleaseItem: PropTypes.arrayOf(PropTypes.shape({
@@ -56,4 +56,4 @@ const dummyData = {
   ]
 
 };
-export default ReleaseItem;
+export default ReleaseList;

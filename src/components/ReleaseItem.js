@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Release = ({ title, artwork }) => {
-  undefined.map();
+const ReleaseItem = ({ title, artwork }) => {
 
   return (
     <figure>
@@ -14,8 +13,9 @@ const Release = ({ title, artwork }) => {
   );
 };
 
-Release.propTypes = {
+ReleaseItem.propTypes = {
   title: PropTypes.string,
   artwork: PropTypes.string,
-}
-;
+};
+
+export default ReleaseItem;

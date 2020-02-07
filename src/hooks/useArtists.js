@@ -3,7 +3,7 @@ import { getArtists } from '../services/artistApi';
 
 
 
-const useCharacters = (query) => {
+const useArtists = (query) => {
   const [currentArtists, setCurrentArtists] = useState({
     artists:[]
   });
@@ -11,10 +11,10 @@ const useCharacters = (query) => {
     if(query !== '') {
         
       getArtists(query)
-        .then(currentCharacters => setCurrentArtists(currentCharacters));
+        .then(currentArtists => setCurrentArtists(currentArtists));
     }
     
   }, [query]);
   return currentArtists;
 };
-export default useCharacters;
+export default useArtists;
