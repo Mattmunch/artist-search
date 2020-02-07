@@ -3,6 +3,13 @@ export const getArtists = (query) => {
     .then(res => res.json());
 };
     
+export const getReleases = (artistid) => {
+  return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistid}&fmt=json`)
+    .then(res => {
+      return res.json();
+    });
+};
+    
 export const getRelease = (releaseid) => {
   return fetch(`http://musicbrainz.org/ws/2/recording?release=${releaseid}&fmt=json`)
     .then(res => res.json());
