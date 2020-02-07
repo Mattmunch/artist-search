@@ -5,4 +5,11 @@ export const getArtists = (query) => {
     });
 };
     
+export const getReleases = (artistid) => {
+  return fetch(`http://musicbrainz.org/ws/2/release?artist=${artistid}&fmt=json`)
+    .then(res => {
+      return res.json();
+    });
+};
+    
   
