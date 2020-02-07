@@ -2,6 +2,22 @@
 
 exports[`App component renders App 1`] = `
 <BrowserRouter>
-  <ArtistSearch />
+  <Route
+    component={[Function]}
+    exact={true}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    path="/artist/:artistId/:artist"
+  />
+  <Route
+    component={[Function]}
+    path="/release/:releaseId"
+  />
+  <Route
+    component={[Function]}
+    path="/lyrics/:artist/:title"
+  />
 </BrowserRouter>
 `;
