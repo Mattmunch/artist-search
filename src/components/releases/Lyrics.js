@@ -8,7 +8,7 @@ const Lyrics = ({ match }) => {
     getLyrics(match.params.artist, match.params.title)
       .then(lyrics => setLyrics(lyrics));
   }, []);
-console.log(lyrics);
+
   return (
     <p>{lyrics.lyrics}</p>
   );
