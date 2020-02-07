@@ -10,7 +10,7 @@ export const getReleases = (artistid) => {
     });
 };
     
-export const getRelease = (releaseid) => {
+export const getRecordings = (releaseid) => {
   return fetch(`http://musicbrainz.org/ws/2/recording?release=${releaseid}&fmt=json`)
     .then(res => res.json());
 };

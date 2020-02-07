@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ReleaseItem = ({ releaseItem }) => (
+const RecordingItem = ({ title }) => (
   <>
-    <h2>releaseItem.title</h2>
-    <p>releaseItem.id</p>
+    <h2>{title}</h2>
+    
   </>
 );
 
-ReleaseItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
-}.isRequired;
+RecordingItem.propTypes = {
+  title: PropTypes.string.isRequired
+};
 
-export default ReleaseItem;
+export default RecordingItem;

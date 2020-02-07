@@ -5,7 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import ArtistDetail from './ArtistDetail';
-// import ReleaseItem from './releases/release';
+import ReleaseDetail from './releases/ReleaseDetail';
 
 export default function App() {
   return (
@@ -13,6 +13,7 @@ export default function App() {
       
       <Route exact path="/" component={ArtistSearch}/> 
       <Route path="/artist/:artistId" component={ArtistDetail} />
+      <Route path="/release/:releaseId" component={ReleaseDetail} />
       
     </Router>
   );
