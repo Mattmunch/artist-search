@@ -6,10 +6,11 @@ import PropTypes from 'prop-types';
 
 const ArtistDetail = ({ match }) => {
   const { releases } = useReleases(match.params.artistId);
+  console.log(releases);
   const artistReleases = releases.map(release => (
     <li key={release.id}>
-      <Link to={`/release/${release.id}`}>
-        <ReleaseItem artwork={release.artwork} title={release.title}/>
+      <Link to={`/release/${release.id}/${match.params.artist}`}>
+        <ReleaseItem artwork={release.artwork} title={release.title} />
       </Link>
     </li>
   ));
