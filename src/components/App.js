@@ -12,7 +12,7 @@ import Lyrics from './releases/Lyrics';
 
 const Header = () => (
   <header>
-    <h1 className={styles.Header}>idk someone else name this plz</h1>
+    <h1 className={styles.Header}>LyricsQuest</h1>
     <nav className={styles.ReturnLink}>
       <Link to="/">-- Return to Artist Search --</Link>
     </nav>

@@ -9,7 +9,7 @@ const ArtistSearch = () => {
   const artistElements = artistResponse.artists.map(artist =>
     <li className={styles.ArtistName} key={artist.id}>
       <Link to={`/artist/${artist.id}/${artist.name}`}>
-        <h1>{artist.name}</h1>
+        <h2>{artist.name}</h2>
       </Link>
     </li>
   );
