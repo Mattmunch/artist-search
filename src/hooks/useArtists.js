@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getArtists } from '../services/artistApi';
 
-
-
 const useArtists = (query) => {
   const [currentArtists, setCurrentArtists] = useState({
     artists:[]
