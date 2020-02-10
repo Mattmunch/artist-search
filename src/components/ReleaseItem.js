@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './App.css';
 
 const ReleaseItem = ({ title, releaseId }) => {
 
   return (
-    <figure>
+    <figure className={styles.Album}>
       <img src={`http://coverartarchive.org/release/${releaseId}/front`} style={{ width: '200px' }} onError={(e)=>{e.target.onerror = null; e.target.src = 'https://dimensionmill.org/wp-content/uploads/2019/03/square-placeholder.jpg';}} />
       <figcaption>
         <p>{title}</p>

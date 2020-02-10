@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useReleases } from '../hooks/useReleases';
 import ReleaseItem from './ReleaseItem';
 import PropTypes from 'prop-types';
+import styles from './App.css';
 
 const ArtistDetail = ({ match }) => {
   const { releases } = useReleases(match.params.artistId);
@@ -15,7 +16,7 @@ const ArtistDetail = ({ match }) => {
   ));
 
   return (
-    <ul>
+    <ul className={styles.AlbumList}>
       {artistReleases}
     </ul>
   );
